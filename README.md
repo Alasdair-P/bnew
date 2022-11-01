@@ -20,8 +20,8 @@ In this work we present a simple but effective method for training Binarized Neu
 This code should work for PyTorch >= 1.0 in python3. Please install the necessary packages using:
 
 ```
-If required, download relievent dataset and set the paths in the data/cli.py
-Cifar10 and cifar 100 should download automatically.
+Please set the paths in the data/cli.py
+Cifar10 and Cifar100 should download automatically.
 ```
 
 # Reproducing the Results
@@ -64,6 +64,7 @@ python reproduce/cifar10/d10ste.py
 python reproduce/cifar10/d10bop.py
 python reproduce/cifar10/d10bnew.py
 ```
+
 # Cifar100 without Distillation
 
 Run:
@@ -77,7 +78,21 @@ python reproduce/cifar100/100ste.py
 python reproduce/cifar100/100bop.py
 python reproduce/cifar100/100bnew.py
 ```
-Similarly for with Distillation
+
+# Cifar100 with Distillation
+
+Run:
+```
+python reproduce/cifar100/teachers.py
+python reproduce/cifar100/phase_1_dist_100.py
+```
+Followed buy:
+```
+python reproduce/cifar100/d100bmd.py
+python reproduce/cifar100/d100ste.py
+python reproduce/cifar100/d100bop.py
+python reproduce/cifar100/d100bnew.py
+```
 
 
 TODO add ImageNet Code

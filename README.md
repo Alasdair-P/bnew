@@ -94,5 +94,24 @@ python reproduce/cifar100/d100bop.py
 python reproduce/cifar100/d100bnew.py
 ```
 
+# Imagenet Expeiments 
+to reproduce our experiements, first run the below to train model with binary actiations and real valued parameters
+```
+cd ImageNet_ReActNet/moblienet/1_step1
+./run.sh
+```
+then change directory and run the binazirtion phase with:
+```
+ImageNet_ReActNet/moblienet/3_step2_ours
+./run.sh
+```
+finally fine tune the binary parameters with:
+```
+./fine_tine.sh
+```
+some paths with the scipts might need to be adjusted to link the data sets or where you want to store logs etc
 
-TODO add ImageNet Code
+
+# acknowledgements
+
+The imagenet code is bases on that of Zechun Liu and is publicly avaible here https://github.com/liuzechun/ReActNet
